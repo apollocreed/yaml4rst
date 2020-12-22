@@ -1,0 +1,18 @@
+- id: yaml4rst
+  name: yaml 4 RST
+  description: lint inline RST comment from yaml file
+  require_serial: false
+  language: python
+  entry: yaml4rst
+  pass_filenames: false
+  types: []
+  files: \.y?ml$
+  exclude_types: [xml]
+  exclude: >
+    (?x)^(
+    .+.iml |
+    .+.gitignore |
+    .+\.idea\/.*$ |
+    \.pre-commit.*$ |
+    requirements.*$
+    )$
